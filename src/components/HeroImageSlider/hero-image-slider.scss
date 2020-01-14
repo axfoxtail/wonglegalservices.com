@@ -1,0 +1,90 @@
+.slider {
+    height: 100vh;
+    min-height: 700px;
+    .slider-content {
+        background-repeat: no-repeat;
+        background-size: cover;
+        .slide-captions {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // .slide-top-logo {
+
+            // }
+            .slide-title-pre {
+                color: #ffffff;
+                font-size: 1em;
+                line-height: 29px;
+                font-family: Lora;
+                font-style: normal;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 0px;
+                text-shadow: none;
+            }
+            .slide-title {
+                color: #ffffff;
+                font-size: 90px;
+                line-height: 91px;
+                font-family: 'Lora';
+                font-style: normal;
+                font-weight: 400;
+                text-shadow: none;
+                letter-spacing: 0px;
+                text-transform: none;
+            }
+            .slide-description {
+                text-shadow: none;
+                color: #ffffff;
+                font-size: 21px;
+                line-height: 34px;
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: 300;
+                text-transform: none;
+            }
+        }
+    }
+    .slide {
+        &.animateIn.previous img,
+        &.current img,
+        &.animateIn.next img {
+            -webkit-transform: scale(1.0);
+                    transform: scale(1.0);
+            -webkit-transition-delay: 1.2s;
+                            transition-delay: 1.2s;
+                            opacity: 1;
+        }
+        img {
+            transition: all 0.5s ease;
+            -webkit-transform: scale(0);
+                            transform: scale(0);
+            opacity: 0;
+        }
+        &.animateIn.previous h2,
+        &.current h2,
+        &.animateIn.next h2,
+        &.animateIn.previous h4,
+        &.current h4,
+        &.animateIn.next h4,
+        &.animateIn.previous button,
+        &.current button,
+        &.animateIn.next button,
+        &.animateIn.previous p,
+        &.current p,
+        &.animateIn.next p {
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+            -webkit-transition-delay: 1.2s;
+                            transition-delay: 1.2s;
+                            opacity: 1;
+        }
+        h2, h4, p {
+            transition: all 0.5s ease;
+            -webkit-transform: translateY(20px);
+                            transform: translateY(20px);
+            opacity: 0;
+        }
+    }
+}
