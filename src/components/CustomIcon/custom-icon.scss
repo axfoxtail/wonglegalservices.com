@@ -1,0 +1,51 @@
+.custom-icon {
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-icon-storage {
+    background-image: url(../../assets/images/storage-black.png);
+    &:hover {
+        background-image: url(../../assets/images/storage-red.png);
+    }
+}
+
+.custom-icon-file {
+    background-image: url(../../assets/images/file-black.png);
+    &:hover {
+        background-image: url(../../assets/images/file-red.png);
+    }
+}
+.custom-icon-mail-search {
+    background-image: url(../../assets/images/mail-search-black.png);
+    &:hover {
+        background-image: url(../../assets/images/mail-search-red.png);
+    }
+}
+.custom-icon-lock {
+    background-image: url(../../assets/images/lock-black.png);
+    &:hover {
+        background-image: url(../../assets/images/lock-red.png);
+    }
+}
+.custom-icon-search {
+    background-image: url(../../assets/images/search-black.png);
+    &:hover {
+        background-image: url(../../assets/images/search-red.png);
+    }
+}
+.custom-icon-cash {
+    background-image: url(../../assets/images/cash-black.png);
+    &:hover {
+        background-image: url(../../assets/images/cash-red.png);
+    }
+}
+.custom-icon-bank {
+    background-image: url(../../assets/images/bank-black.png);
+    &:hover {
+        background-image: url(../../assets/images/bank-red.png);
+    }
+}

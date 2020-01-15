@@ -37,7 +37,25 @@
                     border-radius: 0px;
                     background-color: rgba(255, 255, 255, 0.3);
                 }
+                &:hover {
+                    color: #ff4d40 !important;
+                }
+                &.btn-red {
+                    &:hover {
+                        background-color: #ffffff !important;
+                    }
+                }
             }
         }
+    }
+}
+
+
+.footer {
+    .footer-top {
+        background-color: #383838;
+    }
+    .footer-bottom {
+        background-color: #303030;
     }
 }

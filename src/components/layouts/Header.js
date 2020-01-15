@@ -4,6 +4,8 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import './layouts.scss';
 
 export default function Header() {
+    const activeRoute = window.location.href.split('/')[window.location.href.split('/').length -1];
+
     return (
         <div className="header">
             <div className="top-nav text-left">
@@ -19,19 +21,19 @@ export default function Header() {
                         <img className="logo" src={require('../../assets/images/logo.png')} alt="logo" />
                     </Navbar.Brand>
                     <Nav.Item>
-                        <Nav.Link to="/" eventKey="link-0">Wong & Co</Nav.Link>
+                        <Nav.Link className={activeRoute === '' ? 'active' : ''} href="/" eventKey="link-0">Wong & Co</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link to="/about-us" eventKey="link-1">About Us</Nav.Link>
+                        <Nav.Link className={activeRoute === 'about-us' ? 'active' : ''} href="/about-us" eventKey="link-1">About Us</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link to="/services" eventKey="link-2">Our Services</Nav.Link>
+                        <Nav.Link className={activeRoute === 'services' ? 'active' : ''} href="/services" eventKey="link-2">Our Services</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link to="/contact-us" eventKey="link-3">Contact</Nav.Link>
+                        <Nav.Link className={activeRoute === 'contact-us' ? 'active' : ''} href="/contact-us" eventKey="link-3">Contact</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link to="/" eventKey="link-4">Get consultation</Nav.Link>
+                        <Nav.Link href="/" eventKey="link-4" className="btn btn-lg btn-red ml-3" style={{marginTop: '11px'}}>Get consultation</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </div>
