@@ -9,6 +9,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+import HeaderTop from './components/layouts/HeaderTop';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
 import Home from './views/Home';
@@ -19,6 +20,7 @@ import ContactUs from './views/ContactUs';
 function App() {
   return (
     <div className="App">
+      <HeaderTop />
       <Header />
       <div className="main">
         <Router>

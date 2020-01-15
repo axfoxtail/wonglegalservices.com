@@ -1,27 +1,60 @@
+.top-nav {
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255, 0.38);
+    height: 34px;
+    line-height: 34px;
+    width: 100%;
+    z-index: 10;
+}   
 .header {
     position: absolute;
     display: flow-root;
     width: 100%;
     z-index: 10;
-    .top-nav {
-        border-bottom: 1px solid rgba(255,255,255, 0.38);
-        height: 34px;
-        line-height: 34px;
+    
+    &.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: rgba(70,81,117,0);
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        height: 100px;
+        transition: height 0.32s, background-color 0.4s;
+    }
+    &.fixed {
+        position: fixed;
+        top: 0;
+        background-color: rgba(70,81,117,1);
+        height: 62px;
+        transition: height 0.32s, background-color 0.4s;
+        .main-nav {
+            .navbar-brand {
+                .logo {
+                    max-height: 47px;
+                    transition: max-height 0.3s;
+                }
+            }
+            .nav-item {
+                padding: 0;
+                transition: padding 0.3s;
+            }
+        }
     }
     .main-nav {
-        border-bottom: 1px solid rgba(255,255,255,0.3);
         .navbar-brand {
             margin-right: auto;
             .logo {
                 max-height: 90px;
+                transition: max-height 0.3s;
             }
         }
         .nav-item {
             display: inline-block;
-            padding: 15px 0;
+            padding: 18px 0;
             margin: 0;
             background-repeat: no-repeat;
             background-position: right;
+            transition: padding 0.3s;
             .nav-link {
                 color: #ffffff;
                 font-family: 'Lora', sans-serif;
@@ -32,7 +65,7 @@
                 letter-spacing: 0px;
                 text-transform: uppercase;
                 vertical-align: middle;
-                padding: 22px 18px 22px 18px;
+                padding: 17px;
                 &.active {
                     border-radius: 0px;
                     background-color: rgba(255, 255, 255, 0.3);
@@ -41,6 +74,7 @@
                     color: #ff4d40 !important;
                 }
                 &.btn-red {
+                    margin-top: 6px;
                     &:hover {
                         background-color: #ffffff !important;
                     }
